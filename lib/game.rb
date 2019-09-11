@@ -46,7 +46,6 @@ class Game
   end
 
   def turn
-    puts "Please enter 1-9:"
     user_input = gets.strip
     user_index = user_input.to_i - 1
     if @board.valid_move?(user_index) && !@board.taken?(user_index)
