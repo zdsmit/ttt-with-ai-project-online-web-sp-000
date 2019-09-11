@@ -46,15 +46,28 @@ class Game
   end
 
   def turn
-    user_input = gets.strip
-    user_index = user_input.to_i - 1
-    if @board.valid_move?(user_index) && !@board.taken?(user_index)
-      @board.update(user_index, current_player)
+    move = current_player.move(@board)
+    if @board.valid_move?(move) && !@board.taken?(move)
+      @board.update(move, current_player)
+    else
+      turn
     end
       @board.display
   end
 
   def play
+    until over?
+      turn
+    end
+    if over?
+      if winner == "X"
+        puts "Congratulations X!"
+      elsif winner == "O"
+        puts "Congratulations O!"
+      elsif draw?
+        puts "Cat's Game!"
+      end
+    end
   end
 
 end
