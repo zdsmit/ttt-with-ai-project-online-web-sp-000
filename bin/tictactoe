@@ -1,3 +1,19 @@
 #!/usr/bin/env ruby
 
 require_relative '../config/environment'
+
+
+def play_game
+  puts "Welcome to Tic Tac Toe! We hope you enjoy this evening's game."
+  puts "Before we get started, how many players will be participating?"
+  puts"
+    0 - Computer vs Computer
+    1 - Human vs Computer
+    2 - Human vs Human"
+
+   
+  
+  
+end
+
+play_game
