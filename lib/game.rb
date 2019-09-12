@@ -56,6 +56,7 @@ class Game
   end
 
   def play
+    puts "Please enter 1-9:"
     until over?
       turn
     end
