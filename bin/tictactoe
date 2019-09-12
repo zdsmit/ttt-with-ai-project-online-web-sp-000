@@ -19,8 +19,6 @@ def play_game
   elsif player_input == "2"
     Game.new(Players::Human.new("X"), Players::Human.new("O"))
   end
-
-
 end
 
 play_game
