@@ -11,9 +11,9 @@ def play_game
     1 - Human vs Computer
     2 - Human vs Human"
 
-   
-  
-  
+
+
+
 end
 
 play_game
